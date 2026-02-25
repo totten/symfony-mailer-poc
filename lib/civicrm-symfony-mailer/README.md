@@ -52,5 +52,5 @@ The `ctrl.sh` script will run `composer` and `box` to produce a suitable PHAR.
 Here is how I typically run it:
 
 ```bash
-nix-shell --run './lib/civicrm-symfony-mailer/ctl.sh build clean'
+nix-shell --run './lib/civicrm-symfony-mailer/lib.sh build clean'
 ```
