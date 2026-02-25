@@ -28,6 +28,17 @@ _This is an [extension for CiviCRM](https://docs.civicrm.org/sysadmin/en/latest/
 
 NOTE: If you do not configure `CIVICRM_SYMFONY_MAILER_DSN`, then the system will continue using PEAR Mail.
 
+## Included transports
+
+In Symfony Mailer, there are built-in transports (such as SMTP and Sendmail) and contributed transports (such as Amazon
+SES or Sendgrid).  None of this has been tested.  But I've included a few in case someone wants to try them.
+
+* `symfony/google-mailer`
+* `symfony/amazon-mailer`
+* `symfony/sendgrid-mailer`
+* `symfony/mailgun-mailer`
+* `symfony/mailjet-mailer`
+
 ## Known Issues
 
 * Only implements FlexMailer support (CiviMail/Mosaico).
