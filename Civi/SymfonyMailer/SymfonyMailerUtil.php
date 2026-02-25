@@ -52,8 +52,8 @@ class SymfonyMailerUtil {
       }
     }
 
+    $mail->getHeaders()->addHeader('X-CiviMail-Engine', 'SymfonyMailer'); // REVERT
     return $mail;
-
   }
 
   public static function applyHeaders(Email $mail, array $headers): void {

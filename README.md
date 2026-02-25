@@ -48,3 +48,4 @@ SES or Sendgrid).  None of this has been tested.  But I've included a few in cas
   allows PEAR Mail-consumers to delegate to Symfony Mailer. (There's a rough draft in the similar [phpmailer-poc](https://github.com/totten/phpmailer-poc).)
 * The DSN requires extra setup. You could read `mailing_backend` and set this automatically.
 * Need to detect SMTP error codes. (Without this, delivery tracking may be inaccurate.)
+* Sends an extra header (`X-CiviMail-Engine: SymfonyMailer`) which should probably be removed. But helps you confirm that SymfonyMailer was used.
