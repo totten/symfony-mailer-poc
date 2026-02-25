@@ -22,6 +22,7 @@ _This is an [extension for CiviCRM](https://docs.civicrm.org/sysadmin/en/latest/
     define('CIVICRM_SYMFONY_MAILER_DSN', 'smtps://smtp.example.com?local_domain=example.org');
     define('CIVICRM_SYMFONY_MAILER_DSN', 'sendmail://default');
     define('CIVICRM_SYMFONY_MAILER_DSN', 'sendmail://default?command=/usr/sbin/sendmail%20-oi%20-t');
+    define('CIVICRM_SYMFONY_MAILER_DSN', 'sendmail://default?command=/var/qmail/bin/sendmail%20-t%20-i');
     define('CIVICRM_SYMFONY_MAILER_DSN', 'roundrobin(postmark+api://ID@default sendgrid+smtp://KEY@default)');
     ```
 
