@@ -43,7 +43,7 @@ When you test the new libraries, you may find that you need to fine-tune:
 
 ## Building
 
-The `build.sh` script will run `composer` and `box` to produce a suitable PHAR.
+The `ctrl.sh` script will run `composer` and `box` to produce a suitable PHAR.
 
 > TIP: This will also leave an extra folder called `vendor/` that contains the original files.
 > If you use an IDE like PhpStorm, then the folder will create extra noise
@@ -51,6 +51,6 @@ The `build.sh` script will run `composer` and `box` to produce a suitable PHAR.
 
 Here is how I typically run it:
 
-```
-nix-shell --run ./lib/civicrm-symfony-mailer/build.sh && rm -rf lib/civicrm-symfony-mailer/vendor/
+```bash
+nix-shell --run './lib/civicrm-symfony-mailer/ctl.sh build clean'
 ```
