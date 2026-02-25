@@ -6,13 +6,17 @@
 
 ## Build the PHAR file
 function task_build() {
+  set -ex
   composer install --prefer-dist --no-progress --no-suggest --no-dev
-  php pathload.json.php > pathload.json
-  run_box compile -v
+
   LIB_VER=$(php -r 'echo (require "version.php");')
   if [ ! -d "$DIST_DIR" ]; then
     mkdir -p "$DIST_DIR"
   fi
+
+  php pathload.json.php > pathload.json
+  run_box compile -v
+
   mv vendor.phar ../../dist/"${LIB_NAME}@${LIB_VER}.phar"
 }
 
@@ -97,6 +101,7 @@ fi
 ## Fire tasks
 pushd "$LIB_DIR" >> /dev/null
   for TASK in "${TASKS[@]}"; do
+    echo "Run [$TASK]"
     $TASK
   done
 popd >> /dev/null
