@@ -1,0 +1,3 @@
+lib/*/vendor/
+lib/*/vendor.phar
+lib/*/pathload.json
