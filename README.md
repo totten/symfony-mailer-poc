@@ -1,6 +1,6 @@
 # symfony_mailer (proof of concept)
 
-Replaces the delivery backend for CiviCRM mailings -- switching from PEAR Mail to Symfony Mailer  In theory, Symfony Mailer is
+Replaces the delivery backend for CiviCRM mailings -- switching from PEAR Mail to Symfony Mailer.  In theory, Symfony Mailer is
 updated more frequently and may have more compatibility fixes.
 
 This implementation was written circa Feb 2026 to help assess utility and feasibility.  Assume that it is incomplete.
@@ -19,6 +19,7 @@ _This is an [extension for CiviCRM](https://docs.civicrm.org/sysadmin/en/latest/
     define('CIVICRM_SYMFONY_MAILER_DSN', 'smtp://user:pass@smtp.example.com:25');
     define('CIVICRM_SYMFONY_MAILER_DSN', 'smtp://user:pass@smtp.example.com?peer_fingerprint=6A1CF3B08D175A284C30BC10DE19162307C7286E');
     define('CIVICRM_SYMFONY_MAILER_DSN', 'smtp://user:pass@smtp.example.com?verify_peer=0');
+    define('CIVICRM_SYMFONY_MAILER_DSN', 'smtps://smtp.example.com?local_domain=example.org');
     define('CIVICRM_SYMFONY_MAILER_DSN', 'sendmail://default');
     define('CIVICRM_SYMFONY_MAILER_DSN', 'sendmail://default?command=/usr/sbin/sendmail%20-oi%20-t');
     define('CIVICRM_SYMFONY_MAILER_DSN', 'roundrobin(postmark+api://ID@default sendgrid+smtp://KEY@default)');
