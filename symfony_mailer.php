@@ -3,6 +3,9 @@ declare(strict_types = 1);
 
 // phpcs:disable PSR1.Files.SideEffects
 require_once 'symfony_mailer.civix.php';
+pathload()->addSearchDir(__DIR__ . '/dist');
+pathload()->addNamespace('civicrm-symfony-mailer@6', ['SM6\\']);
+
 // phpcs:enable
 
 use CRM_SymfonyMailer_ExtensionUtil as E;
