@@ -36,3 +36,7 @@ function symfony_mailer_civicrm_install(): void {
 function symfony_mailer_civicrm_enable(): void {
   _symfony_mailer_civix_civicrm_enable();
 }
+
+function _symfony_mailer_dsn(): ?string {
+  return CRM_Utils_Constant::value('CIVICRM_SYMFONY_MAILER_DSN');
+}
