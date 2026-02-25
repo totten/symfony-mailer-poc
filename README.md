@@ -14,11 +14,17 @@ _This is an [extension for CiviCRM](https://docs.civicrm.org/sysadmin/en/latest/
 * In `civicrm.settings.php`, create a "DSN" string, e.g.
 
     ```php
+    define('CIVICRM_SYMFONY_MAILER_DSN', 'native://default');
     define('CIVICRM_SYMFONY_MAILER_DSN', 'smtp://localhost:25');
-    define('CIVICRM_SYMFONY_MAILER_DSN', 'smtp://username:password@smtp.example.com:587?SMTPSecure=tls&SMTPAuth=true');
-    define('CIVICRM_SYMFONY_MAILER_DSN', 'sendmail://');
-    define('CIVICRM_SYMFONY_MAILER_DSN', 'mail://');
+    define('CIVICRM_SYMFONY_MAILER_DSN', 'smtp://user:pass@smtp.example.com:25');
+    define('CIVICRM_SYMFONY_MAILER_DSN', 'smtp://user:pass@smtp.example.com?peer_fingerprint=6A1CF3B08D175A284C30BC10DE19162307C7286E');
+    define('CIVICRM_SYMFONY_MAILER_DSN', 'smtp://user:pass@smtp.example.com?verify_peer=0');
+    define('CIVICRM_SYMFONY_MAILER_DSN', 'sendmail://default');
+    define('CIVICRM_SYMFONY_MAILER_DSN', 'sendmail://default?command=/usr/sbin/sendmail%20-oi%20-t');
+    define('CIVICRM_SYMFONY_MAILER_DSN', 'roundrobin(postmark+api://ID@default sendgrid+smtp://KEY@default)');
     ```
+
+    For more DSN options, see https://symfony.com/doc/6.4/mailer.html
 
 NOTE: If you do not configure `CIVICRM_SYMFONY_MAILER_DSN`, then the system will continue using PEAR Mail.
 
