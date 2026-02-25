@@ -19,7 +19,7 @@ class SymfonySender extends BasicSender implements EventSubscriberInterface {
 
   public static function getSubscribedEvents(): array {
     return [
-      'civi.flexmailer.send' => ['onSend', 0],
+      'civi.flexmailer.send' => ['onSend', 100],
     ];
   }
 
