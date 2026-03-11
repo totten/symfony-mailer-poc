@@ -1,3 +1,4 @@
 lib/*/vendor/
 lib/*/vendor.phar
 lib/*/pathload.json
+lib/*/pathload.main.php
